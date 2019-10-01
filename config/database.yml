@@ -1,9 +1,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: sf_demo_app_dev
+  database: sf_demo_development
   pool: 5
-  username: sf_demo
+  username: labonwheels
   password:
 
 production:
@@ -11,5 +11,5 @@ production:
   encoding: unicode
   database: sf_demo_app_pro
   pool: 5
-  username: sf_demo
+  username: labonwheels
   password:
