@@ -1,3 +1,21 @@
-<% @users.each do |user| %>
-  <%=  user.email %>
+Leads<br>
+<% @sleads.each do |slead| %>
+  <%=  slead.firstname %> <%=  slead.lastname %><br>
+  <%=  slead.company %><br>
+  <%=  slead.email %><br>
+  <%=  slead.phone %><br>
+  <%= link_to "Edit", edit_slead_path(slead) %><br><br>
+<% end %>
+<br>Contacts<br>
+<% @scontacts.each do |scontact| %>
+  <%=  scontact.firstname %> <%=  scontact.lastname %><br>
+  <%=  scontact.email %><br>
+  <%=  scontact.phone %><br>
+  <%= link_to "Edit", edit_scontact_path(scontact) %><br><br>
+<% end %>
+<br>Accounts<br>
+<% @saccounts.each do |saccount| %>
+  <%=  saccount.name %><br>
+  <%=  saccount.phone %><br>
+  <%= link_to "Edit", edit_saccount_path(saccount) %><br><br>
 <% end %>

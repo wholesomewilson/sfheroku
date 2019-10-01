@@ -3,7 +3,7 @@ class SalesforceModel < ActiveRecord::Base
     self.inheritance_column = 'rails_type'
 
     establish_connection ENV['HEROKUCONNECT_URL']
-	attr_protected :createddate, :systemmodstamp, :lastmodifieddate
+
 
 	def hc_errors
 		HerokuconnectTriggerLog.where(:record_id => self.id, :state => 'FAILED').order("id DESC").all
