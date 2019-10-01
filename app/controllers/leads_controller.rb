@@ -28,7 +28,7 @@ class LeadsController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   def update
@@ -45,6 +45,6 @@ class LeadsController < ApplicationController
   end
 
   def lead_params
-    params.require(:lead).permit(:first_name, :last_name, :phone, :email)
+    params.require(:lead).permit(:first_name, :last_name, :phone, :email, :company)
   end
 end
