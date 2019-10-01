@@ -1,7 +1,7 @@
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
   def index
-    @leads = Lead.all
+    @leads = Slead.all
   end
 
   def show
