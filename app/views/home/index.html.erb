@@ -75,25 +75,25 @@
     }
   })
 
-$(document).ready(function(){
-  setTimeout(function () {
+  function myAjaxRequest () {
     $.ajax({
       url: "/home/stable",
       cache: false,
       success: function(html){
         $("#stable").html(html);
       },
-      error: function(xhr, status) {
-        // check if xhr.status is defined in $.ajax.statusCode
-        // if true, return false to stop this function
-        if (typeof this.statusCode[xhr.status] != 'undefined') {
-            return false;
-        }
-        // else continue
-        console.log('ajax.error');
+    error: function () {
+      setTimeout(() => {
+        myAjaxRequest()
+      }, 1000) // if there was an error, wait 1 second and re-run the function
     }
     });
-  }, 7000);
+  }
+
+$(document).ready(function(){
+  setTimeout(function () {
+    myAjaxRequest()
+  }, 4000);
 })
 
 </script>
