@@ -40,3 +40,61 @@ a:-webkit-any-link{
   display: inline-block;
   padding: 20px 10px;
 }
+
+.info_wrapper{
+  float: right;
+  padding: 18px 30px;
+}
+
+.readme_wrapper{
+  display: none;
+  position: absolute;
+  background-color: #FFD782;
+  top: 30px;
+  right: 75px;
+  width: 330px;
+  font-size: 14px;
+  padding: 10px 10px 0px 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.tooltip_url::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -14px;
+  margin-left: -7px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #FFD782 transparent transparent transparent;
+  transform: rotate(270deg);
+}
+
+.tooltip_url_desc {
+  display: none;
+  background-color: #DC4C46;
+  color: #fff;
+  text-align: center;
+  border-radius: 7px;
+  position: absolute;
+  opacity: 1;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 10px;
+  width: 100%
+}
+
+.tooltip_url_desc::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -7px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #DC4C46 transparent transparent transparent;
+}
