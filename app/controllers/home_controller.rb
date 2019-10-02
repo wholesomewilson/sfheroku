@@ -4,7 +4,6 @@ class HomeController < ApplicationController
     @sleads = Slead.all
     @saccounts = Saccount.all
     @scontacts = Scontact.all
-    #@records = @scontacts.order(systemmodstamp: :desc).first(5)
   end
 
   def stable
