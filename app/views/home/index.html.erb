@@ -1,21 +1,32 @@
-Leads<br>
-<% @sleads.each do |slead| %>
-  <%=  slead.firstname %> <%=  slead.lastname %><br>
-  <%=  slead.company %><br>
-  <%=  slead.email %><br>
-  <%=  slead.phone %><br>
-  <%= link_to "Edit", edit_slead_path(slead) %><br><br>
-<% end %>
-<br>Contacts<br>
-<% @scontacts.each do |scontact| %>
-  <%=  scontact.firstname %> <%=  scontact.lastname %><br>
-  <%=  scontact.email %><br>
-  <%=  scontact.phone %><br>
-  <%= link_to "Edit", edit_scontact_path(scontact) %><br><br>
-<% end %>
-<br>Accounts<br>
-<% @saccounts.each do |saccount| %>
-  <%=  saccount.name %><br>
-  <%=  saccount.phone %><br>
-  <%= link_to "Edit", edit_saccount_path(saccount) %><br><br>
-<% end %>
+<div class="container home_wrapper">
+  <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center">
+    <h4 class="leads_header">Leads</h4>
+    <% @sleads.each do |slead| %>
+      <div class="card_wrapper slead_card_colour relative">
+        <h5><%=  slead.firstname %> <%=  slead.lastname %></h5>
+        <%=  slead.company %><br>
+        <%=  slead.email %><br>
+        <%=  slead.phone %><br>
+        <%= link_to image_tag("edit.png", size:'22x22'), edit_slead_path(slead), class:"edit_icon" %>
+      </div>
+    <% end %>
+    <h4 class="contacts_header">Contacts</h4>
+    <% @scontacts.each do |scontact| %>
+      <div class="card_wrapper scontact_card_colour relative">
+        <h5><%=  scontact.firstname %> <%=  scontact.lastname %></h5>
+        <%=  scontact.email %><br>
+        <%=  scontact.phone %><br>
+        <%= link_to image_tag("edit.png", size:'22x22'), edit_scontact_path(scontact), class:"edit_icon" %>
+      </div>
+    <% end %>
+    <h4 class="accounts_header">Accounts</h4>
+    <% @saccounts.each do |saccount| %>
+      <div class="card_wrapper saccount_card_colour relative">
+        <h5><%= saccount.name %></h5>
+        <h5><%= saccount.id %></h5>
+        <%=  saccount.phone %><br>
+        <%= link_to image_tag("edit.png", size:'22x22'), edit_saccount_path(saccount), class:"edit_icon" %>
+      </div>
+    <% end %>
+  </div>
+</div>

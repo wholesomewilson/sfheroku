@@ -1,5 +1,11 @@
-<%= @scontact.firstname %><br>
-<%= @scontact.lastname %><br>
-<%= @scontact.email %><br>
-<%= @scontact.phone %><br>
-<%= link_to "Edit", edit_scontact_path(@scontact) %>
+<div class="container show_wrapper">
+  <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center">
+    <div class="card_wrapper scontact_card_colour relative">
+      <h5><%= @scontact.firstname %> <%= @scontact.lastname %></h5>
+      <%= @scontact.email %><br>
+      <%= @scontact.phone %><br>
+      <%= link_to image_tag("edit.png", size:'25x25'), edit_scontact_path(@scontact), class:"edit_icon" %>
+    </div>
+    <%= link_to "Home", root_path, class:"btn btn-primary btn-home" %>
+  </div>
+</div>

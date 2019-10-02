@@ -1,3 +1,67 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.leads_header{
+  background-color: #004488;
+  color: #fff;
+  padding: 5px 0px;
+  border-radius: 5px;
+}
+
+.contacts_header{
+  background-color: #880044;
+  color: #fff;
+  padding: 5px 0px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.accounts_header{
+  background-color: #448800;
+  color: #fff;
+  padding: 5px 0px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.card_wrapper{
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  h5{
+    font-size: 16px;
+  }
+}
+
+.slead_card_colour{
+  background-color: #e5ecf3;
+}
+
+.scontact_card_colour{
+  background-color: #f3e5ec;
+}
+
+.saccount_card_colour{
+  background-color: #ecf3e5;
+}
+
+.form_wrapper{
+  margin-top: 50px;
+  padding: 0px 0px 10px 0px!important;
+}
+
+.show_wrapper{
+  margin-top: 50px;
+  padding: 0px 0px 10px 0px!important;
+}
+
+.edit_icon{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.btn-home{
+  margin-top: 50px;
+}
