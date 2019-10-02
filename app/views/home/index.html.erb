@@ -78,6 +78,7 @@
 $(document).ready(function(){
   setTimeout(function () {
     $.ajax({
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
       url: "/home/stable",
       cache: false,
       success: function(html){
@@ -93,7 +94,7 @@ $(document).ready(function(){
         console.log('ajax.error');
     }
     });
-  }, 6000);
+  }, 4000);
 })
 
 </script>
