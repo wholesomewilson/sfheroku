@@ -1,10 +1,12 @@
 <div class="container home_wrapper">
   <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center">
-    <h4 class="leads_header relative" data-toggle="collapse" data-target="#lead">
-      Leads
-      <i class='arrow up'></i>
+    <div class="relative">
+      <h4 class="leads_header" data-toggle="collapse" data-target="#lead">
+        Leads
+        <i class='arrow up'></i>
+      </h4>
       <%= link_to image_tag("add.png", size:"25x25"), new_slead_path, class:"btn-add" %>
-    </h4>
+    </div>
     <div id="lead" class="collapse">
       <% @sleads.each do |slead| %>
         <div class="card_wrapper slead_card_colour relative">
@@ -16,11 +18,13 @@
         </div>
       <% end %>
     </div>
-    <h4 class="contacts_header relative" data-toggle="collapse" data-target="#contact">
-      Contacts
-      <i class='arrow up'></i>
+    <div class="relative">
+      <h4 class="contacts_header" data-toggle="collapse" data-target="#contact">
+        Contacts
+        <i class='arrow up'></i>
+      </h4>
       <%= link_to image_tag("add.png", size:"25x25"), new_scontact_path, class:"btn-add" %>
-    </h4>
+    </div>
     <div id="contact" class="collapse">
       <% @scontacts.each do |scontact| %>
         <div class="card_wrapper scontact_card_colour relative">
@@ -31,11 +35,13 @@
         </div>
       <% end %>
     </div>
-    <h4 class="accounts_header relative" data-toggle="collapse" data-target="#account">
-      Accounts
-      <i class='arrow up'></i>
+    <div class="relative">
+      <h4 class="accounts_header" data-toggle="collapse" data-target="#account">
+        Accounts
+        <i class='arrow up'></i>
+      </h4>
       <%= link_to image_tag("add.png", size:"25x25"), new_saccount_path, class:"btn-add" %>
-    </h4>
+    </div>
     <div id="account" class="collapse">
       <% @saccounts.each do |saccount| %>
         <div class="card_wrapper saccount_card_colour relative">
