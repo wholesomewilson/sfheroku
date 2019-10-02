@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.home_wrapper{
+  margin-top: 30px;
+}
+
 .leads_header{
   background-color: #004488;
   color: #fff;
@@ -14,7 +18,7 @@
   color: #fff;
   padding: 5px 0px;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .accounts_header{
@@ -22,7 +26,7 @@
   color: #fff;
   padding: 5px 0px;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .card_wrapper{
@@ -30,7 +34,7 @@
   margin-bottom: 10px;
   border-radius: 10px;
   h5{
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -64,4 +68,34 @@
 
 .btn-home{
   margin-top: 50px;
+}
+
+.btn-add{
+  position: absolute;
+  right: -30px;
+  top: 1px;
+}
+
+.tag_collapse_wrapper{
+  display: inline-block;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-bottom: 5px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  margin-top: 5px;
+}
+
+i.arrow{
+  border: solid #ccc;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-left: 10px;
 }

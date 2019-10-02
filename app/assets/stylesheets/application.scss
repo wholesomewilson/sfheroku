@@ -17,9 +17,26 @@
 @import "bootstrap";
 
 body{
- font-size: 14px;
+ font-size: 13px;
+}
+
+a:-webkit-any-link{
+  text-decoration:none;
 }
 
 .relative{
   position: relative;
+}
+
+.header_wrapper{
+  font-size: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  background-image: linear-gradient(#F53D2D, #FF6633);
+}
+
+.header_group{
+  color: #fff;
+  display: inline-block;
+  padding: 20px 10px;
 }

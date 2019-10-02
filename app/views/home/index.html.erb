@@ -1,32 +1,63 @@
 <div class="container home_wrapper">
   <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 text-center">
-    <h4 class="leads_header">Leads</h4>
-    <% @sleads.each do |slead| %>
-      <div class="card_wrapper slead_card_colour relative">
-        <h5><%=  slead.firstname %> <%=  slead.lastname %></h5>
-        <%=  slead.company %><br>
-        <%=  slead.email %><br>
-        <%=  slead.phone %><br>
-        <%= link_to image_tag("edit.png", size:'22x22'), edit_slead_path(slead), class:"edit_icon" %>
-      </div>
-    <% end %>
-    <h4 class="contacts_header">Contacts</h4>
-    <% @scontacts.each do |scontact| %>
-      <div class="card_wrapper scontact_card_colour relative">
-        <h5><%=  scontact.firstname %> <%=  scontact.lastname %></h5>
-        <%=  scontact.email %><br>
-        <%=  scontact.phone %><br>
-        <%= link_to image_tag("edit.png", size:'22x22'), edit_scontact_path(scontact), class:"edit_icon" %>
-      </div>
-    <% end %>
-    <h4 class="accounts_header">Accounts</h4>
-    <% @saccounts.each do |saccount| %>
-      <div class="card_wrapper saccount_card_colour relative">
-        <h5><%= saccount.name %></h5>
-        <h5><%= saccount.id %></h5>
-        <%=  saccount.phone %><br>
-        <%= link_to image_tag("edit.png", size:'22x22'), edit_saccount_path(saccount), class:"edit_icon" %>
-      </div>
-    <% end %>
+    <h4 class="leads_header relative" data-toggle="collapse" data-target="#lead">
+      Leads
+      <i class='arrow up'></i>
+      <%= link_to image_tag("add.png", size:"25x25"), new_slead_path, class:"btn-add" %>
+    </h4>
+    <div id="lead" class="collapse">
+      <% @sleads.each do |slead| %>
+        <div class="card_wrapper slead_card_colour relative">
+          <h5><%=  slead.firstname %> <%=  slead.lastname %></h5>
+          <%=  slead.company %><br>
+          <%=  slead.email %><br>
+          <%=  slead.phone %><br>
+          <%= link_to image_tag("edit.png", size:'22x22'), edit_slead_path(slead), class:"edit_icon" %>
+        </div>
+      <% end %>
+    </div>
+    <h4 class="contacts_header relative" data-toggle="collapse" data-target="#contact">
+      Contacts
+      <i class='arrow up'></i>
+      <%= link_to image_tag("add.png", size:"25x25"), new_scontact_path, class:"btn-add" %>
+    </h4>
+    <div id="contact" class="collapse">
+      <% @scontacts.each do |scontact| %>
+        <div class="card_wrapper scontact_card_colour relative">
+          <h5><%=  scontact.firstname %> <%=  scontact.lastname %></h5>
+          <%=  scontact.email %><br>
+          <%=  scontact.phone %><br>
+          <%= link_to image_tag("edit.png", size:'22x22'), edit_scontact_path(scontact), class:"edit_icon" %>
+        </div>
+      <% end %>
+    </div>
+    <h4 class="accounts_header relative" data-toggle="collapse" data-target="#account">
+      Accounts
+      <i class='arrow up'></i>
+      <%= link_to image_tag("add.png", size:"25x25"), new_saccount_path, class:"btn-add" %>
+    </h4>
+    <div id="account" class="collapse">
+      <% @saccounts.each do |saccount| %>
+        <div class="card_wrapper saccount_card_colour relative">
+          <h5><%= saccount.name %></h5>
+          <h5><%= saccount.id %></h5>
+          <%=  saccount.phone %><br>
+          <%= link_to image_tag("edit.png", size:'22x22'), edit_saccount_path(saccount), class:"edit_icon" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
+
+
+<script>
+  $('.leads_header, .contacts_header, .accounts_header').on('click', function(){
+    var get_class = "." + $(this).attr('class').split(' ')[0];
+    console.log(get_class)
+    if ($(get_class + ' .arrow').hasClass('up') || $(this).hasClass('collapsed')){
+      $(get_class + ' .arrow').removeClass('up').addClass('down')
+    }else{
+      $(get_class + ' .arrow').removeClass('down').addClass('up')
+    }
+  })
+</script>
