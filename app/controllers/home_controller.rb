@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   include HomeHelper
-  before_action :authenticate_user!
   def index
     @sleads = Slead.all
     @saccounts = Saccount.all
