@@ -40,24 +40,45 @@
       <% @saccounts.each do |saccount| %>
         <div class="card_wrapper saccount_card_colour relative">
           <h5><%= saccount.name %></h5>
-          <h5><%= saccount.id %></h5>
           <%=  saccount.phone %><br>
           <%= link_to image_tag("edit.png", size:'22x22'), edit_saccount_path(saccount), class:"edit_icon" %>
         </div>
       <% end %>
     </div>
   </div>
-</div>
 
+</div>
+<div class="col-12 col-lg-8 offset-lg-2 text-center btn-home">
+  <div id="stable">
+    <div class="loading_wrapper">
+      <div class="loading">
+        Loading Heroku Postgres Table. Please hold on!
+        <%= image_tag("loader.gif", id:"loader3") %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   $('.leads_header, .contacts_header, .accounts_header').on('click', function(){
     var get_class = "." + $(this).attr('class').split(' ')[0];
-    console.log(get_class)
     if ($(get_class + ' .arrow').hasClass('up') || $(this).hasClass('collapsed')){
       $(get_class + ' .arrow').removeClass('up').addClass('down')
     }else{
       $(get_class + ' .arrow').removeClass('down').addClass('up')
     }
   })
+
+$(document).ready(function(){
+  setTimeout(function () {
+    $.ajax({
+      url: "/home/stable",
+      cache: false,
+      success: function(html){
+        $("#stable").html(html);
+      }
+    });
+  }, 4000);
+})
+
 </script>

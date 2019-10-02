@@ -1,0 +1,33 @@
+<h5 class="stable_header">Heroku Postgres Table</h5>
+<table>
+  <tr>
+    <th>Mapping</th>
+    <th>Modified Timestamp</th>
+    <th>Name</th>
+    <th>Company</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+<% @records.each do |record| %>
+  <tr>
+    <td><%= record.class.name[1..-1].capitalize %></td>
+    <td><%= record.systemmodstamp.in_time_zone("Singapore").strftime('%e %b %Y %l:%M:%S%p') %></td>
+    <% if record.has_attribute?('name') %>
+      <td><%= record.name %></td>
+    <% else %>
+      <td><%= record.firstname %> <%= record.lastname %></td>
+    <% end %>
+    <% if record.has_attribute?('company') %>
+      <td><%= record.company %></td>
+    <% else %>
+      <td>-</td>
+    <% end %>
+    <% if record.has_attribute?('email') %>
+      <td><%= record.email %></td>
+    <% else %>
+      <td>-</td>
+    <% end %>
+    <td><%= record.phone %></td>
+  </tr>
+<% end %>
+</table>
