@@ -5,7 +5,7 @@
     <th>Modified Timestamp</th>
     <th>Name</th>
     <th>Company</th>
-    <th>Email</th>
+
     <th>Phone</th>
   </tr>
 <% @records.each do |record| %>
@@ -22,11 +22,7 @@
     <% else %>
       <td>-</td>
     <% end %>
-    <% if record.has_attribute?('email') %>
-      <td><%= record.email %></td>
-    <% else %>
-      <td>-</td>
-    <% end %>
+
     <td><%= record.phone %></td>
   </tr>
 <% end %>
