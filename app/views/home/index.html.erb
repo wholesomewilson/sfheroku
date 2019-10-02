@@ -46,18 +46,18 @@
       <% end %>
     </div>
   </div>
-
-</div>
-<div class="col-12 col-lg-8 offset-lg-2 text-center btn-home">
-  <div id="stable">
-    <div class="loading_wrapper">
-      <div class="loading">
-        Loading Heroku Postgres Tables. Please hold on!
-        <%= image_tag("loader.gif", id:"loader3") %>
+  <div class="col-12 col-lg-8 offset-lg-2 text-center btn-home">
+    <div id="stable">
+      <div class="loading_wrapper">
+        <div class="loading">
+          Loading Heroku Postgres Tables. Please hold on!
+          <%= image_tag("loader.gif", id:"loader3") %>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <script>
   $('.leads_header, .contacts_header, .accounts_header').on('click', function(){
@@ -78,7 +78,7 @@ $(document).ready(function(){
         $("#stable").html(html);
       }
     });
-  }, 4000);
+  }, 5000);
 })
 
 </script>
