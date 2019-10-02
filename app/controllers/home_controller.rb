@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   end
 
   def stable
-    @records = get_records.sort_by { |x| x.systemmodstamp.to_i }.reverse!
+    @records = get_records.sort_by { |x| x.systemmodstamp }.reverse!
     render :layout => false
   end
 end
