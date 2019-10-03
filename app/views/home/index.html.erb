@@ -86,8 +86,7 @@
           setTimeout( function() {
             $(".loading_wrapper").hide();
           }, 1000)
-          $("#loadtable").append(html);
-          console.log("loaded again")
+          $("#loadtable").html(html);
         },
       error: function () {
         setTimeout(() => {
