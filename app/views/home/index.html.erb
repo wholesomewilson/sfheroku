@@ -52,7 +52,7 @@
       <% end %>
     </div>
   </div>
-  <div class="col-12 col-lg-8 offset-lg-2 text-center btn-home">
+  <div class="col-12 col-lg-8 offset-lg-2 text-center tablewrapper">
     <div id="stable">
       <div class="loading_wrapper">
         <div class="loading">
@@ -60,6 +60,7 @@
           <%= image_tag("loader.gif", id:"loader3") %>
         </div>
       </div>
+      <div id="loadtable"></div>
     </div>
   </div>
 </div>
@@ -75,25 +76,30 @@
     }
   })
 
-  function myAjaxRequest () {
-    $.ajax({
-      url: "/home/stable",
-      cache: false,
-      success: function(html){
-        $("#stable").html(html);
-      },
-    error: function () {
-      setTimeout(() => {
-        myAjaxRequest()
-      }, 1000) // if there was an error, wait 1 second and re-run the function
-    }
-    });
+  function myAjaxRequest() {
+    $(".loading_wrapper").show();
+    setTimeout(function () {
+      $.ajax({
+        url: "/home/stable",
+        cache: false,
+        success: function(html){
+          setTimeout( function() {
+            $(".loading_wrapper").hide();
+          }, 1000)
+          $("#loadtable").append(html);
+          console.log("loaded again")
+        },
+      error: function () {
+        setTimeout(() => {
+          myAjaxRequest()
+        }, 1000) // if there was an error, wait 1 second and re-run the function
+      }
+      });
+    }, 4000);
   }
 
 $(document).ready(function(){
-  setTimeout(function () {
-    myAjaxRequest()
-  }, 4000);
+  setInterval(myAjaxRequest, 5000);
 })
 
 </script>

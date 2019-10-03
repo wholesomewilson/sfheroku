@@ -110,3 +110,19 @@ table{
   padding: 10px 0;
   color: #fff;
 }
+
+.loading_wrapper{
+  position: absolute;
+  left: 50%;
+  top: -35px;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+#loadtable{
+  margin-top: 10px;
+}
+
+.tablewrapper{
+  margin-top: 70px;
+}
