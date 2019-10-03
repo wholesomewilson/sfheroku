@@ -78,7 +78,7 @@
 
   function myAjaxRequest() {
     $(".loading_wrapper").show();
-    setTimeout(function () {
+
       $.ajax({
         url: "/home/stable",
         cache: false,
@@ -92,14 +92,14 @@
       error: function () {
         setTimeout(() => {
           myAjaxRequest()
-        }, 1000) // if there was an error, wait 1 second and re-run the function
+        }, 2000) // if there was an error, wait 1 second and re-run the function
       }
       });
-    }, 4000);
+
   }
 
 $(document).ready(function(){
-  setInterval(myAjaxRequest, 5000);
+  setInterval(myAjaxRequest, 4000);
 })
 
 </script>
