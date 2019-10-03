@@ -81,9 +81,7 @@
         url: "/home/stable",
         cache: false,
         success: function(html){
-          setTimeout( function() {
-            $(".loading_wrapper").hide();
-          }, 1000)
+          $(".loading_wrapper").hide();
           $("#loadtable").html(html);
         },
       error: function () {
