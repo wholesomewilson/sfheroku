@@ -11,13 +11,13 @@ Ruby on Rails, jQuery, HTML, CSS, Heroku
 
 ## Features
 
-### Create or Update objects to Heroku Postgres and SalesForce
+### Create or Update records to Heroku Postgres and SalesForce Objects
 The main feature of the app is to update the databases of both Heroku Postgres and SalesForce Objects to achieve data synchronization.
 
 Key Features: CRUD for records in both Heroku Postgres and SalesForce Objects
 
 ### Heroku Postgres Tables
-It shows the most recent modified records in both Heroku Postgres and SalesForce Objects to show the results of CRUD actions provided in the app.
+It shows the most recent modified records in both Heroku Postgres and SalesForce Objects to show the results of CRUD functions in the app.
 
 Key Features: Update table without page refresh (Ajax)
 
