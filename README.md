@@ -1,24 +1,27 @@
-# README
+# Heroku Connect with SalesForce
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple CRUD web app which uses Heroku Connect Sync method (Mapping).
 
-Things you may want to cover:
+# Motivation
 
-* Ruby version
+I developed this web app on my own initiative to demonstrate my full stack development skills to the hiring team for a technical position. Without prior knowledge on SalesForce, I was able to demonstrate fast learning ability to pick up the skills needed for the job requirement within a short amount of time.
 
-* System dependencies
+## Tech Stacks
+Ruby on Rails, jQuery, HTML, CSS, Heroku
 
-* Configuration
+## Features
 
-* Database creation
+### Create or Update objects to Heroku Postgres and SalesForce
+The main feature of the app is to update the databases of both Heroku Postgres and SalesForce Objects to achieve data synchronization.
 
-* Database initialization
+Key Features: CRUD for records in both Heroku Postgres and SalesForce Objects
 
-* How to run the test suite
+### Heroku Postgres Tables
+It shows the most recent modified records in both Heroku Postgres and SalesForce Objects to show the results of CRUD actions provided in the app.
 
-* Services (job queues, cache servers, search engines, etc.)
+Key Features: Update table without page refresh (Ajax)
 
-* Deployment instructions
+## License
+A short snippet describing the license (MIT, Apache etc)
 
-* ...
+MIT © [Wilson Wan]()
