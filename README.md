@@ -4,7 +4,7 @@ This is a simple CRUD web app which uses Heroku Connect Sync method (Mapping).
 
 # Motivation
 
-I developed this web app on my own initiative to demonstrate my full stack development skills to the hiring team for a technical position. Without prior knowledge on SalesForce, I was able to demonstrate fast learning ability to pick up the skills needed for the job requirement within a short amount of time.
+I developed this web app on my own initiative to demonstrate my full stack development skills to the hiring team for a technical position. Without prior knowledge on SalesForce, I was able to demonstrate my fast learning ability to pick up the skills needed for the job requirement within a short amount of time.
 
 ## Tech Stacks
 Ruby on Rails, jQuery, HTML, CSS, Heroku
