@@ -4,7 +4,7 @@ This is a simple CRUD web app which uses Heroku Connect Sync method (Mapping).
 
 # Motivation
 
-I developed this web app on my own initiative to demonstrate my full stack development skills to the hiring team for a technical position. Without prior knowledge on SalesForce, I was able to demonstrate my fast learning ability to pick up the skills needed for the job requirement within a short amount of time.
+I developed this web app with my own initiative to demonstrate my full stack development skills to the hiring team for a technical position. Without prior knowledge on SalesForce, I was able to demonstrate my fast learning ability to pick up the skills needed for the job requirement within a short amount of time.
 
 ## Tech Stacks
 Ruby on Rails, jQuery, HTML, CSS, Heroku
@@ -17,7 +17,7 @@ The main feature of the app is to update the databases of both Heroku Postgres a
 Key Features: CRUD for records in both Heroku Postgres and SalesForce Objects
 
 ### Heroku Postgres Tables
-It shows the most recent modified records in both Heroku Postgres and SalesForce Objects to show the results of CRUD functions in the app.
+It shows the most recent modified records in both Heroku Postgres and SalesForce Objects to verify the results of CRUD functions in the app.
 
 Key Features: Update table without page refresh (Ajax)
 
